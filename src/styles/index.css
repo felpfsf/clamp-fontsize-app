@@ -13,24 +13,24 @@
     @apply cursor-pointer;
   }
 
-  .container {
-    @apply w-full my-16 mx-auto;
+  .section-wrapper {
+    @apply w-full my-0 md:my-10 mx-auto;
   }
 
-  .container-wrapper {
-    @apply w-[80%] m-auto p-8 border border-red-500;
+  .content-wrapper {
+    @apply w-full md:w-[80%] m-auto p-5 border border-red-500;
   }
 
   .title {
-    @apply text-4xl;
+    @apply text-4xl font-bold text-center;
   }
 
   .subtitle {
-    @apply text-xl;
+    @apply text-base text-center mt-2;
   }
 
   .fields-container {
-    @apply flex flex-col items-center;
+    @apply max-w-[550px] min-w-[320px] w-full my-8 m-auto bg-red-50 flex flex-col items-center;
   }
 
   .inputs-container {
@@ -38,15 +38,19 @@
   }
 
   .field-container {
-    @apply flex flex-col md:flex-row;
+    @apply flex flex-col sm:flex-row;
+  }
+  
+  .label-style {
+    @apply text-sm font-semibold
   }
 
   .input-style {
-    @apply w-40 h-8 mt-1 p-2 border-none rounded-xl;
+    @apply w-40 h-8 mt-1 p-2 border-none rounded-xl text-sm;
   }
 
   .clamp-field {
-    @apply relative w-[90%] mt-4 mx-auto p-4 bg-slate-200 border-none rounded-xl;
+    @apply relative w-[100%] md:w-[512px] mt-4 mx-auto p-4 bg-slate-200 border-none rounded-xl;
   }
 
   .clamp-code {

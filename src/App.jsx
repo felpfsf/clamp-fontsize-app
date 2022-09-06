@@ -44,15 +44,15 @@ const App = () => {
   }
 
   return (
-    <section className='container'>
-      <div className="container-wrapper">
+    <section className='section-wrapper'>
+      <div className="content-wrapper">
         <h1 className='title'>Font-size Clamp</h1>
-        <h2 className='subtitle'>Generate linearly scale font-size using clamp() function</h2>
+        <h2 className='subtitle'>Scale linearly your font-size with clamp</h2>
         <div className="fields-container">
 
           <div className="field-container">
             <div className="inputs-container">
-              <label htmlFor="minWidthpx">Min viewport width</label>
+              <label className='label-style' htmlFor="minWidthpx">Min viewport width(px)</label>
               <input
                 id='minWidthpx'
                 className='input-style'
@@ -62,7 +62,7 @@ const App = () => {
             </div>
 
             <div className="inputs-container">
-              <label htmlFor="maxWidthpx">Max viewport width</label>
+              <label className='label-style' htmlFor="maxWidthpx">Max viewport width(px)</label>
               <input
                 id='maxWidthpx'
                 className='input-style'
@@ -74,7 +74,7 @@ const App = () => {
 
           <div className="field-container">
             <div className="inputs-container">
-              <label htmlFor="minFontSize">Min font-size</label>
+              <label className='label-style' htmlFor="minFontSize">Min font-size(rem)</label>
               <input
                 id='minFontSize'
                 className='input-style'
@@ -84,7 +84,7 @@ const App = () => {
             </div>
 
             <div className="inputs-container">
-              <label htmlFor="maxFontSize">Max font-size</label>
+              <label className='label-style' htmlFor="maxFontSize">Max font-size(rem)</label>
               <input
                 id='maxFontSize'
                 className='input-style'
@@ -95,14 +95,16 @@ const App = () => {
           </div>
 
 
-          <div className="">
-            <label htmlFor="pxPerRem">1rem = </label>
-            <input
-              id='pxPerRem'
-              className='input-style w-16'
-              type="number"
-              value={pxPerRem}
-              onChange={e => setPxPerRem(Number(e.target.value))} />
+          <div className="inputs-container">
+            <label className='label-style' htmlFor="pxPerRem">REM -> PX</label>
+            <label className='label-style' htmlFor="pxPerRem">1rem:
+              <input
+                id='pxPerRem'
+                className='input-style w-16'
+                type="number"
+                value={pxPerRem}
+                onChange={e => setPxPerRem(Number(e.target.value))} />
+            </label>
           </div>
         </div>
 

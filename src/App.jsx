@@ -4,13 +4,13 @@ import 'react-toastify/dist/ReactToastify.css'
 import { BiCopy } from 'react-icons/bi'
 
 const App = () => {
-  const [pxPerRem, setPxPerRem] = useState(16)
+  const [pxPerRem, setPxPerRem] = useState(10)
 
   const [minWidthpx, setMinWidthpx] = useState(360)
-  const [maxWidthpx, setMaxWidthpx] = useState(840)
+  const [maxWidthpx, setMaxWidthpx] = useState(960)
 
-  const [minFontSize, setMinFontSize] = useState(1)
-  const [maxFontSize, setMaxFontSize] = useState(3.5)
+  const [minFontSize, setMinFontSize] = useState(16)
+  const [maxFontSize, setMaxFontSize] = useState(4.2)
 
   const hElement = useRef()
 
@@ -29,7 +29,7 @@ const App = () => {
   // onClick={e => console.log(e.currentTarget.innerText)}
   // console.log(e.current?.innerText)
 
-  function copyToClipboard() {
+  const copyToClipboard = () => {
     const textToBeCopied = hElement.current.innerText
     console.log(textToBeCopied);
     navigator.clipboard.writeText(textToBeCopied)
@@ -39,7 +39,8 @@ const App = () => {
   const toastMessage = (textToBeCopied) => {
     toast.info(`${textToBeCopied} Copied !`, {
       position: toast.POSITION.TOP_CENTER,
-      className: 'w-[360px] text-xs p-4'
+      className: 'w-[360px] text-xs p-4',
+      pauseOnHover: 'true'
     })
   }
 
@@ -96,15 +97,16 @@ const App = () => {
 
 
           <div className="inputs-container">
-            <label className='label-style' htmlFor="pxPerRem">REM -> PX</label>
+            <label className='label-style' htmlFor="pxPerRem">REM to PX</label>
             <label className='label-style' htmlFor="pxPerRem">1rem:
               <input
                 id='pxPerRem'
-                className='input-style w-16'
+                className='input-style w-16 ml-4'
                 type="number"
                 value={pxPerRem}
                 onChange={e => setPxPerRem(Number(e.target.value))} />
             </label>
+            <p className='instructions'>1rem = 10px; 16px = 1.6rem</p>
           </div>
         </div>
 

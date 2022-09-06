@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-slate-500 w-screen text-base;
+  }
+}
+
+@layer components {
+  .cursors {
+    @apply cursor-pointer;
+  }
+
+  .container {
+    @apply w-full my-16 mx-auto;
+  }
+
+  .container-wrapper {
+    @apply w-[80%] m-auto p-8 border border-red-500;
+  }
+
+  .title {
+    @apply text-4xl;
+  }
+
+  .subtitle {
+    @apply text-xl;
+  }
+
+  .fields-container {
+    @apply flex flex-col items-center;
+  }
+
+  .inputs-container {
+    @apply m-2 flex flex-col items-center;
+  }
+
+  .field-container {
+    @apply flex flex-col md:flex-row;
+  }
+
+  .input-style {
+    @apply w-40 h-8 mt-1 p-2 border-none rounded-xl;
+  }
+
+  .clamp-field {
+    @apply relative w-3/4 mt-4 mx-auto p-4 bg-slate-200 border-none rounded-xl;
+  }
+
+  .copy-btn {
+    @apply absolute right-2 top-[10%] text-2xl;
+  }
+}

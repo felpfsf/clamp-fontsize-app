@@ -23,7 +23,7 @@ const App = () => {
   const yAxisIntersection = -minWidth * slope + minFontSize
   console.log(yAxisIntersection.toFixed(4));
 
-  const clampFunction = `font-size: clamp(${minFontSize}rem, ${yAxisIntersection.toFixed(4)}rem + ${(slope * 100).toFixed(4)})vw, ${maxFontSize}rem)`
+  const clampFunction = `font-size: clamp(${minFontSize}rem, ${yAxisIntersection.toFixed(4)}rem + ${(slope * 100).toFixed(4)})vw, ${maxFontSize}rem);`
 
   // Tests
   // onClick={e => console.log(e.currentTarget.innerText)}
@@ -68,7 +68,7 @@ const App = () => {
                 className='input-style'
                 type="number"
                 value={maxWidthpx}
-                onChange={e => setMaxWidthpx(e.target.value)} />
+                onChange={e => setMaxWidthpx(Number(e.target.value))} />
             </div>
           </div>
 
@@ -80,7 +80,7 @@ const App = () => {
                 className='input-style'
                 type="number"
                 value={minFontSize}
-                onChange={e => setMinFontSize(e.target.value)} />
+                onChange={e => setMinFontSize(Number(e.target.value))} />
             </div>
 
             <div className="inputs-container">
@@ -90,7 +90,7 @@ const App = () => {
                 className='input-style'
                 type="number"
                 value={maxFontSize}
-                onChange={e => setMaxFontSize(e.target.value)} />
+                onChange={e => setMaxFontSize(Number(e.target.value))} />
             </div>
           </div>
 
@@ -102,12 +102,12 @@ const App = () => {
               className='input-style w-16'
               type="number"
               value={pxPerRem}
-              onChange={e => setPxPerRem(e.target.value)} />
+              onChange={e => setPxPerRem(Number(e.target.value))} />
           </div>
         </div>
 
         <div className="clamp-field">
-          <h4 ref={hElement}>{clampFunction}</h4>
+          <h4 className='clamp-code' ref={hElement}>{clampFunction}</h4>
           <BiCopy className='copy-btn cursors' onClick={copyToClipboard} />
         </div>
 

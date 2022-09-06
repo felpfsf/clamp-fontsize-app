@@ -5,6 +5,13 @@ module.exports = {
     extend: {
       fontFamily: {
         body: ['Poppins']
+      },
+      colors: {
+        clampColors: {
+          clrFont: 'hsl(208, 100%, 97%)',
+          clrHover: 'hsl(271, 76%, 53%)',
+          clrNeon: '#bc13fe',
+        }
       }
     }
   },

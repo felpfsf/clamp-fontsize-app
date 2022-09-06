@@ -4,7 +4,7 @@
 
 @layer base {
   body {
-    @apply bg-slate-500 w-screen text-base;
+    @apply bg-slate-500 w-screen text-base font-body;
   }
 }
 
@@ -46,7 +46,11 @@
   }
 
   .clamp-field {
-    @apply relative w-3/4 mt-4 mx-auto p-4 bg-slate-200 border-none rounded-xl;
+    @apply relative w-[90%] mt-4 mx-auto p-4 bg-slate-200 border-none rounded-xl;
+  }
+
+  .clamp-code {
+    @apply text-sm
   }
 
   .copy-btn {

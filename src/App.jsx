@@ -9,7 +9,7 @@ const App = () => {
   const [minWidthpx, setMinWidthpx] = useState(360)
   const [maxWidthpx, setMaxWidthpx] = useState(960)
 
-  const [minFontSize, setMinFontSize] = useState(16)
+  const [minFontSize, setMinFontSize] = useState(1)
   const [maxFontSize, setMaxFontSize] = useState(4.2)
 
   const hElement = useRef()

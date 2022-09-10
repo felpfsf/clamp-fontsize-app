@@ -23,7 +23,7 @@ const App = () => {
   const yAxisIntersection = -minWidth * slope + minFontSize
   console.log(yAxisIntersection.toFixed(4));
 
-  const clampFunction = `font-size: clamp(${minFontSize}rem, ${yAxisIntersection.toFixed(4)}rem + ${(slope * 100).toFixed(4)})vw, ${maxFontSize}rem);`
+  const clampFunction = `font-size: clamp(${minFontSize}rem, ${yAxisIntersection.toFixed(4)}rem + ${(slope * 100).toFixed(4)}vw, ${maxFontSize}rem);`
 
   // Tests
   // onClick={e => console.log(e.currentTarget.innerText)}
